@@ -1,0 +1,86 @@
+PODS:
+  - DZNEmptyDataSet (1.8.1)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MJExtension (3.2.4)
+  - ReactiveObjC (3.1.1)
+  - SWBaseControl (1.12.7):
+    - DZNEmptyDataSet
+    - MJExtension
+    - ReactiveObjC
+    - SWBaseControl/Other (= 1.12.7)
+    - SWBaseControl/SWBaseViewController (= 1.12.7)
+    - SWBaseControl/SWPopover (= 1.12.7)
+    - SWCustomPresentation
+    - SWExtension/Core
+    - SWMultipleDelegateProxy
+  - SWBaseControl/Other (1.12.7):
+    - DZNEmptyDataSet
+    - MJExtension
+    - ReactiveObjC
+    - SWCustomPresentation
+    - SWExtension/Core
+    - SWMultipleDelegateProxy
+  - SWBaseControl/SWBaseViewController (1.12.7):
+    - DZNEmptyDataSet
+    - MJExtension
+    - ReactiveObjC
+    - SWCustomPresentation
+    - SWExtension/Core
+    - SWMultipleDelegateProxy
+  - SWBaseControl/SWPopover (1.12.7):
+    - DZNEmptyDataSet
+    - MJExtension
+    - ReactiveObjC
+    - SWCustomPresentation
+    - SWExtension/Core
+    - SWMultipleDelegateProxy
+  - SWCustomPresentation (0.0.9)
+  - SWExtension/Core (1.18.9):
+    - MBProgressHUD
+    - MJExtension
+    - ReactiveObjC
+    - SWExtension/Core/Foundation (= 1.18.9)
+    - SWExtension/Core/UIKit (= 1.18.9)
+  - SWExtension/Core/Foundation (1.18.9):
+    - MBProgressHUD
+    - MJExtension
+    - ReactiveObjC
+  - SWExtension/Core/UIKit (1.18.9):
+    - MBProgressHUD
+    - MJExtension
+    - ReactiveObjC
+    - SWExtension/Core/Foundation
+  - SWMultipleDelegateProxy (0.0.6)
+
+DEPENDENCIES:
+  - Masonry
+  - SWBaseControl
+  - SWExtension/Core
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - DZNEmptyDataSet
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - ReactiveObjC
+    - SWBaseControl
+    - SWCustomPresentation
+    - SWExtension
+    - SWMultipleDelegateProxy
+
+SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJExtension: 88e0900751b6cac8de1cf724ca9838a0b28d5acb
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SWBaseControl: ff1b34d7688d5bc4acc9360fd6d4909bda1f6eb6
+  SWCustomPresentation: 64c9826b714ab1c39fbfd6f200ad165e4a865b86
+  SWExtension: d592a43011e08cfe564124ebf55f99f76a282057
+  SWMultipleDelegateProxy: a6ec2862c7e6eb5cd056777ddd5c97bec43b3c3c
+
+PODFILE CHECKSUM: 6594ba61687d71d4955811974726edf9e59d7c52
+
+COCOAPODS: 1.10.1
