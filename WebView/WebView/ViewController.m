@@ -9,9 +9,7 @@
 #import <WebKit/WebKit.h>
 #import <SWExtension.h>
 
-//static  NSString *const schemeString = @"dev.jbf.aijk.net";
-static  NSString *const schemeString = @"com.dev.jbf.aijk.net";
-
+static  NSString *const schemeString = @"com.dev.jbf.aijk.net";//微信支付注册的安全域名(商户申请H5时提交的授权域名)
 
 @interface ViewController ()<WKNavigationDelegate>
 @property (weak, nonatomic) IBOutlet WKWebView *webView;
@@ -102,13 +100,14 @@ static  NSString *const schemeString = @"com.dev.jbf.aijk.net";
         return;
     }
     else if ([urlStr hasPrefix:@"https://wx.tenpay.com/cgi-bin/mmpayweb-bin/checkmweb"] && [urlStr rangeOfString:[@"redirect_url=" stringByAppendingString:schemeString]].location == NSNotFound){
-        NSString *replaceScheme = [[[[decodeUrlStr componentsSeparatedByString:@"redirect_url="] lastObject] componentsSeparatedByString:@"?tradeNo"] firstObject]?:@"";
+        NSString *replaceScheme = [[[[decodeUrlStr componentsSeparatedByString:@"redirect_url="] lastObject] componentsSeparatedByString:@"?"] firstObject]?:@"";
         if ([decodeUrlStr rangeOfString:replaceScheme].location != NSNotFound){
             decisionHandler(WKNavigationActionPolicyCancel);
             NSString *replacedUrlStr = [decodeUrlStr stringByReplacingOccurrencesOfString:replaceScheme withString:[NSString stringWithFormat:@"%@://",schemeString]];
             NSLog(@"replacedUrlStr:%@",replacedUrlStr);
             self.originalWeiXinUrl = [decodeUrlStr componentsSeparatedByString:@"redirect_url="].lastObject;
             NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[replacedUrlStr stringByAddingPercentEscapesUsingEncoding:   NSUTF8StringEncoding]]];
+            //Referer:http请求的来源
             [request setValue:[NSString stringWithFormat:@"%@://",schemeString] forHTTPHeaderField:@"Referer"];
             [webView loadRequest:request];
             return;
